@@ -1,11 +1,12 @@
-![image](https://github.com/vasanthkumarch/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/36288975/739cc470-48c8-4873-a730-6319b4afc602)
-###  DATE: 
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT:
+###  DATE: 05.04.2024
+
+###  NAME: Sowmiya N
+###  ROLL NO : 212221230016
+###  DEPARTMENT: AI-DS
 # Experiment-no-6-DC-Motor-Speed-Control-Using-Arduino
-### AIM : To control the speed and the direction of a DC motor using L293D driver ic( H- bridge)
+### AIM : 
+To control the speed and the direction of a DC motor using L293D driver ic( H- bridge)
 
 ### Components Required:
 •	Arduino UNO board
@@ -32,18 +33,46 @@ TABLE-01 EXITATION TABLE FOR H BRIDGE
 As shown in the circuit diagram we need only 3 Arduino terminal pins, pin 8 is for the push button which toggles the motor direction of rotation. Pins 9 and 10 are PWM signal outputs, at any time there is only 1 active PWM, this allows us to control the direction as well as the speed by varying the duty cycle of the PWM signal. The active PWM pin decides the motor direction of rotation (one at a time, the other output is logic 0).
 
 ### PROGRAM 
+```
+// C++ code
+//
+int in1=5;
+int in2=6;
+int en=3;
+
+
+void setup()
+{
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  pinMode(en, OUTPUT);
+}
+
+void loop()
+{
+  analogWrite(en,225);
+  
+  
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  delay(500); // Wait for 5000 millisecond(s)
+}
+```
 
 ### OUTPUT
-
+### Circuit :
+![OP](./a3.png)
+### Schematic Diagram :
+![op](./a4.png)
 ### GRAPH AND TABULATION 
 
 
-![image](https://github.com/vasanthkumarch/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/36288975/07e9b28e-9a5b-47bd-a023-3c27fe00fb2b)
+![OP](./a1.png)
+![OP](./a2.png)
 
 
-![image](https://github.com/vasanthkumarch/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/assets/36288975/67ed339f-8011-4acc-b793-e5d4930639c7)
 
 
+### RESULTS :
 
-### RESULTS AND DISCUSSION 
-
+Thus the speed and the direction of a DC motor using L293D driver ic( H- bridge) is controlled.
